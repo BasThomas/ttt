@@ -10,21 +10,42 @@ import UIKit
 
 class GameViewController: UIViewController {
   @IBOutlet var colorView: UIView!
+  @IBOutlet var treeFoundButton: UIButton!
   
   var player: Player!
   var timer: Timer!
   
+  var latestID: Int? {
+    didSet {
+      guard oldValue != latestID else { return }
+      updateColor()
+    }
+  }
+  var latestColor: UIColor?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    colorView.backgroundColor = UIColor.gameColors.random
+    updateColor()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-      Network.status { status in
-        print("Status: \(status)")
+      Network.status { [weak self] status in
+        switch status {
+        case .ready, .ended:
+          return
+        case .found(id: let id):
+          self?.latestID = id
+        }
       }
     }
   }
   
   @IBAction func treeFound(_ sender: AnyObject) {
     Network.found(by: player)
+    treeFoundButton.isEnabled = false
+  }
+  
+  private func updateColor() {
+    treeFoundButton.isEnabled = true
+    colorView.backgroundColor = UIColor.gameColors.filter { $0 != latestColor }.random
+    latestColor = colorView.backgroundColor
   }
 }

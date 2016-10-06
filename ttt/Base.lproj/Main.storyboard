@@ -75,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="colorView" destination="exp-wC-574" id="Yyx-do-Iz5"/>
+                        <outlet property="treeFoundButton" destination="OGH-Rx-UYc" id="Ueh-t5-Smq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
