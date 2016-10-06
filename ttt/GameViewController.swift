@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
   @IBOutlet var colorView: UIView!
   @IBOutlet var treeFoundButton: UIButton!
   
+  var audioPlayer: AVAudioPlayer?
   var player: Player!
   var timer: Timer!
   
@@ -26,6 +28,7 @@ class GameViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateColor()
+    prepareSound()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
       Network.status { [weak self] status in
         switch status {
@@ -51,8 +54,14 @@ class GameViewController: UIViewController {
   private func updateColor() {
     let generator = UIImpactFeedbackGenerator(style: .heavy)
     generator.impactOccurred()
+    audioPlayer?.play()
     treeFoundButton.isEnabled = true
     colorView.backgroundColor = UIColor.gameColors.filter { $0 != latestColor }.random
     latestColor = colorView.backgroundColor
+  }
+  
+  private func prepareSound() {
+    audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "feedback", ofType: "wav")!))
+    audioPlayer?.prepareToPlay()
   }
 }
