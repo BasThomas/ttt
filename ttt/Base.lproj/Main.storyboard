@@ -66,12 +66,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OGH-Rx-UYc" secondAttribute="bottom" constant="20" id="5nS-3E-he8"/>
                             <constraint firstAttribute="trailing" secondItem="exp-wC-574" secondAttribute="trailing" id="9zT-AR-bhO"/>
                             <constraint firstItem="exp-wC-574" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B40-EK-SLi"/>
                             <constraint firstItem="exp-wC-574" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bm0-Bt-ijE"/>
-                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OQV-8D-VP4"/>
-                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="top" secondItem="exp-wC-574" secondAttribute="bottom" constant="20" id="XBp-Sb-Bxc"/>
+                            <constraint firstAttribute="trailing" secondItem="OGH-Rx-UYc" secondAttribute="trailing" id="M6c-D8-RAU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OGH-Rx-UYc" secondAttribute="bottom" id="Pbm-85-tSu"/>
+                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d2W-hE-pCy"/>
+                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="top" secondItem="exp-wC-574" secondAttribute="bottom" id="ji7-JS-17q"/>
                         </constraints>
                     </view>
                     <connections>
