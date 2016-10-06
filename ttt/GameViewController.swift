@@ -44,9 +44,13 @@ class GameViewController: UIViewController {
   @IBAction func treeFound(_ sender: AnyObject) {
     Network.found(by: player)
     treeFoundButton.isEnabled = false
+    let generator = UINotificationFeedbackGenerator()
+    generator.notificationOccurred(.success)
   }
   
   private func updateColor() {
+    let generator = UIImpactFeedbackGenerator(style: .heavy)
+    generator.impactOccurred()
     treeFoundButton.isEnabled = true
     colorView.backgroundColor = UIColor.gameColors.filter { $0 != latestColor }.random
     latestColor = colorView.backgroundColor
