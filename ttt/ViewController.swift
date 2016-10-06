@@ -16,6 +16,6 @@ class ViewController: UIViewController {
   }
   
   @IBAction func treeFound(_ sender: AnyObject) {
-    print("tree found")
+    Network.found()
   }
 }

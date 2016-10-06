@@ -10,4 +10,7 @@ import Foundation
 
 enum Network {
   
+  static func found() {
+    
+  }
 }
