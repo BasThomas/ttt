@@ -23,14 +23,17 @@ class GameViewController: UIViewController {
   }
   var latestColor: UIColor?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     updateColor()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
       Network.status { [weak self] status in
         switch status {
-        case .ready, .ended:
-          return
+        case .ready:
+          ()
+        case .ended:
+          self?.dismiss(animated: true)
+          self?.timer.invalidate()
         case .found(id: let id):
           self?.latestID = id
         }

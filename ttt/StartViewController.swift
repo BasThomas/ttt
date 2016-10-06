@@ -11,14 +11,19 @@ import UIKit
 private let startIdentifier = "start"
 
 class StartViewController: UIViewController {
+  @IBOutlet var startButton: UIButton!
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    startButton.isEnabled = true
+  }
   
   @IBAction func start(_ sender: AnyObject) {
-    let button = sender as? UIButton
-    button?.isEnabled = false
+    startButton.isEnabled = false
     Network.start { [weak self] player, message in
       if let message = message {
         self?.present(UIAlertController.alert(with: message), animated: true)
-        button?.isEnabled = true
+        self?.startButton.isEnabled = true
       } else {
         self?.performSegue(withIdentifier: startIdentifier, sender: player)
       }

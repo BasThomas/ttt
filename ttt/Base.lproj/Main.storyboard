@@ -33,6 +33,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="aB6-Nb-mVs" id="orq-A1-q0I"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="start" id="ncY-B0-DSb"/>
                     </connections>
                 </viewController>
