@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.0.1)
   - Freddy (3.0.0)
+  - QRCodeReader.swift (7.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Freddy
+  - QRCodeReader.swift
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Freddy: 367f994c88a90dd3987293b4b1bec94a4530745a
+  QRCodeReader.swift: 2b57c1d5d503aeea620573a5c9215027b21d9e7a
 
-PODFILE CHECKSUM: 5db3a20dbc3a35e62795c4bcd03f85c2a533f32a
+PODFILE CHECKSUM: 8641a0f0d4cc8dfaaee96340d227e73b4c4f229c
 
 COCOAPODS: 1.1.0.rc.2
