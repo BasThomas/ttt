@@ -10,12 +10,12 @@ import Foundation
 import Alamofire
 import Freddy
 
-fileprivate let baseURL = "http://145.93.33.189:8000/api" //"http://192.168.1.2:8000/api"
+fileprivate let baseURL = "http://145.93.33.189:8000" //"http://192.168.1.2:8000"
 
 enum Network {
   
-  static func start(completionHandler: @escaping (Player?, String?) -> Void) {
-    Alamofire.request("\(baseURL)/start", method: .post, parameters: [:]).responseJSON { response in
+  static func start(completionHandler: @escaping (Game?, String?) -> Void) {
+    Alamofire.request("\(baseURL)/api/start", method: .post, parameters: [:]).responseJSON { response in
       guard
         let data = response.data,
         let statusCode = response.response?.statusCode else { return }
@@ -32,7 +32,12 @@ enum Network {
         do {
           let json = try JSON(data: data)
           let player = try Player(json: json)
-          completionHandler(player, nil)
+          let url = try json.getString(at: "url")
+          guard let imageURL = URL(string: "\(baseURL)/\(url)") else {
+            completionHandler(nil, "Ongeldige URL")
+            return
+          }
+          completionHandler(Game(player: player, url: imageURL), nil)
         } catch {
           completionHandler(nil, error.localizedDescription)
         }
@@ -42,8 +47,8 @@ enum Network {
     }
   }
   
-  static func found(by player: Player, qr: String, completionHandler: @escaping (String?) -> Void) {
-    Alamofire.request("\(baseURL)/found", method: .post, parameters: ["id": player.id, "qr": qr]).responseJSON { response in
+  static func found(by player: Player, qr: String, latestURL imageURL: String, completionHandler: @escaping (URL?, String?) -> Void) {
+    Alamofire.request("\(baseURL)/api/found", method: .post, parameters: ["id": player.id, "qr": qr, "imageURL": imageURL]).responseJSON { response in
       guard
         let data = response.data,
         let statusCode = response.response?.statusCode else { return }
@@ -52,21 +57,27 @@ enum Network {
         do {
           let json = try JSON(data: data)
           let message = try json.getString(at: "message")
-          completionHandler(message)
+          completionHandler(nil, message)
         } catch {
-          completionHandler(error.localizedDescription)
+          completionHandler(nil, error.localizedDescription)
         }
       case 200:
-        completionHandler(nil)
+        do {
+          let json = try JSON(data: data)
+          let urlString = try json.getString(at: "url")
+          completionHandler(URL(string: "\(baseURL)/\(urlString)"), nil)
+        } catch {
+          completionHandler(nil, error.localizedDescription)
+        }
       default:
-        completionHandler("Unhandled status code. (\(statusCode))")
+        completionHandler(nil, "Unhandled status code. (\(statusCode))")
         return
       }
     }
   }
   
   static func status(completionHandler: @escaping (Status) -> Void) {
-    Alamofire.request("\(baseURL)/status", method: .get).responseJSON { response in
+    Alamofire.request("\(baseURL)/api/status", method: .get).responseJSON { response in
       guard
         let data = response.data,
         let json = try? JSON(data: data),

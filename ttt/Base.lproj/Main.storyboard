@@ -60,23 +60,21 @@
                                     <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9G-xi-RKS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exp-wC-574">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="voa-Z7-VlU"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="exp-wC-574" secondAttribute="trailing" id="9zT-AR-bhO"/>
-                            <constraint firstItem="exp-wC-574" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B40-EK-SLi"/>
-                            <constraint firstItem="exp-wC-574" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bm0-Bt-ijE"/>
+                            <constraint firstItem="voa-Z7-VlU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1aV-Dm-9Q3"/>
                             <constraint firstAttribute="trailing" secondItem="OGH-Rx-UYc" secondAttribute="trailing" id="M6c-D8-RAU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OGH-Rx-UYc" secondAttribute="bottom" id="Pbm-85-tSu"/>
+                            <constraint firstAttribute="trailing" secondItem="voa-Z7-VlU" secondAttribute="trailing" id="WMr-LS-CjB"/>
                             <constraint firstItem="OGH-Rx-UYc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d2W-hE-pCy"/>
-                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="top" secondItem="exp-wC-574" secondAttribute="bottom" id="ji7-JS-17q"/>
+                            <constraint firstItem="OGH-Rx-UYc" firstAttribute="top" secondItem="voa-Z7-VlU" secondAttribute="bottom" id="fCV-be-F5q"/>
+                            <constraint firstItem="voa-Z7-VlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zk7-TI-MNu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorView" destination="exp-wC-574" id="Yyx-do-Iz5"/>
+                        <outlet property="imageView" destination="voa-Z7-VlU" id="xdZ-gb-SLL"/>
                         <outlet property="treeFoundButton" destination="OGH-Rx-UYc" id="Ueh-t5-Smq"/>
                     </connections>
                 </viewController>

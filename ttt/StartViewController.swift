@@ -20,7 +20,7 @@ class StartViewController: UIViewController {
   
   @IBAction func start(_ sender: AnyObject) {
     startButton.isEnabled = false
-    Network.start { [weak self] player, message in
+    Network.start { [weak self] game, message in
       if let message = message {
         self?.present(UIAlertController.error(with: message), animated: true) {
           let generator = UINotificationFeedbackGenerator()
@@ -28,7 +28,7 @@ class StartViewController: UIViewController {
         }
         self?.startButton.isEnabled = true
       } else {
-        self?.performSegue(withIdentifier: startIdentifier, sender: player)
+        self?.performSegue(withIdentifier: startIdentifier, sender: game)
       }
     }
   }
@@ -36,8 +36,8 @@ class StartViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard
       let destination = segue.destination as? GameViewController,
-      let player = sender as? Player,
+      let game = sender as? Game,
       segue.identifier == startIdentifier else { return }
-    destination.player = player
+    destination.game = game
   }
 }

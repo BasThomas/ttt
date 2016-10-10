@@ -9,9 +9,14 @@
 import UIKit
 import AVFoundation
 import QRCodeReader
+import Kingfisher
 
 class GameViewController: UIViewController {
-  @IBOutlet var colorView: UIView!
+  @IBOutlet weak var imageView: UIImageView! {
+    didSet {
+      imageView.kf.setImage(with: game.url)
+    }
+  }
   @IBOutlet var treeFoundButton: UIButton!
   
   lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
@@ -21,20 +26,16 @@ class GameViewController: UIViewController {
   })
   
   var audioPlayer: AVAudioPlayer?
-  var player: Player!
-  var timer: Timer!
-  
-  var latestID: Int? {
+  var game: Game! {
     didSet {
-      guard oldValue != latestID else { return }
-      updateColor()
+      latestURLString = String(game.url.path.characters.dropFirst())
     }
   }
-  var latestColor: UIColor?
+  var timer: Timer!
+  var latestURLString: String?
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    updateColor()
+  override func viewDidLoad() {
+    super.viewDidLoad()
     prepareSound()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
       Network.status { [weak self] status in
@@ -44,11 +45,15 @@ class GameViewController: UIViewController {
         case .ended:
           self?.dismiss(animated: true)
           self?.timer.invalidate()
-        case .found(id: let id):
-          self?.latestID = id
+        case .found(id: _):
+          ()
         }
       }
     }
+  }
+  
+  deinit {
+    timer.invalidate()
   }
   
   @IBAction func scan(_ sender: AnyObject) {
@@ -65,13 +70,13 @@ class GameViewController: UIViewController {
     present(readerVC, animated: true)
   }
   
-  private func updateColor() {
+  func updateImage(with url: URL) {
     let generator = UIImpactFeedbackGenerator(style: .heavy)
     generator.impactOccurred()
     audioPlayer?.play()
     treeFoundButton.isEnabled = true
-    colorView.backgroundColor = UIColor.gameColors.filter { $0 != latestColor }.random
-    latestColor = colorView.backgroundColor
+    imageView.kf.setImage(with: url)
+    latestURLString = String(url.path.characters.dropFirst())
   }
   
   private func prepareSound() {
@@ -84,15 +89,18 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
   
   func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
     dismiss(animated: true) { [weak self] in
-      guard let weakSelf = self else { return }
+      guard
+        let weakSelf = self,
+        let imageURLString = self?.latestURLString else { return }
       // FIXME: Generate feedback after handling server here.
-      Network.found(by: weakSelf.player, qr: result.value) { [weak self] error in
+      Network.found(by: weakSelf.game.player, qr: result.value, latestURL: imageURLString) { [weak self] url, error in
         let generator = UINotificationFeedbackGenerator()
         if let error = error {
           self?.present(UIAlertController.error(with: error), animated: true) {
             generator.notificationOccurred(.success)
           }
-        } else {
+        } else if let url = url {
+          self?.updateImage(with: url)
           generator.notificationOccurred(.success)
         }
       }

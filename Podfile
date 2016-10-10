@@ -4,5 +4,6 @@ target 'ttt' do
   pod 'Alamofire'
   pod 'Freddy'
   pod 'QRCodeReader.swift'
+  pod 'Kingfisher'
 
 end
