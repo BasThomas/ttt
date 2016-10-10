@@ -16,7 +16,6 @@ enum Network {
   
   static func start(completionHandler: @escaping (Player?, String?) -> Void) {
     Alamofire.request("\(baseURL)/start", method: .post, parameters: [:]).responseJSON { response in
-      print("response: \(response)")
       guard
         let data = response.data,
         let statusCode = response.response?.statusCode else { return }
@@ -43,8 +42,27 @@ enum Network {
     }
   }
   
-  static func found(by player: Player) {
-    _ = Alamofire.request("\(baseURL)/found", method: .post, parameters: ["id": player.id])
+  static func found(by player: Player, qr: String, completionHandler: @escaping (String?) -> Void) {
+    Alamofire.request("\(baseURL)/found", method: .post, parameters: ["id": player.id, "qr": qr]).responseJSON { response in
+      guard
+        let data = response.data,
+        let statusCode = response.response?.statusCode else { return }
+      switch statusCode {
+      case 404:
+        do {
+          let json = try JSON(data: data)
+          let message = try json.getString(at: "message")
+          completionHandler(message)
+        } catch {
+          completionHandler(error.localizedDescription)
+        }
+      case 200:
+        completionHandler(nil)
+      default:
+        completionHandler("Unhandled status code. (\(statusCode))")
+        return
+      }
+    }
   }
   
   static func status(completionHandler: @escaping (Status) -> Void) {

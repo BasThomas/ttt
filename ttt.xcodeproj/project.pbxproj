@@ -15,6 +15,7 @@
 		4933EBDB1DA63A3F009439A6 /* tttTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBDA1DA63A3F009439A6 /* tttTests.swift */; };
 		4933EBE61DA63AE7009439A6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBE51DA63AE7009439A6 /* Network.swift */; };
 		4933EBE81DA63C97009439A6 /* UIColor+GameColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBE71DA63C97009439A6 /* UIColor+GameColors.swift */; };
+		4941A6BB1DAB8F3E00292B83 /* UIAlertController+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */; };
 		498334F31DA65D81006105C0 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498334F21DA65D81006105C0 /* UIAlertController+Error.swift */; };
 		498334F51DA65E8D006105C0 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498334F41DA65E8D006105C0 /* Array+Random.swift */; };
 		49D9B1881DA6CF090095093A /* feedback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49D9B1871DA6CF090095093A /* feedback.wav */; };
@@ -48,6 +49,7 @@
 		4933EBDC1DA63A3F009439A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4933EBE51DA63AE7009439A6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4933EBE71DA63C97009439A6 /* UIColor+GameColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GameColors.swift"; sourceTree = "<group>"; };
+		4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Success.swift"; sourceTree = "<group>"; };
 		498334F21DA65D81006105C0 /* UIAlertController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
 		498334F41DA65E8D006105C0 /* Array+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		49D9B1871DA6CF090095093A /* feedback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = feedback.wav; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				49FBD55E1DA63F1A0090FF93 /* Control */,
 				4933EBE71DA63C97009439A6 /* UIColor+GameColors.swift */,
 				498334F21DA65D81006105C0 /* UIAlertController+Error.swift */,
+				4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */,
 				498334F41DA65E8D006105C0 /* Array+Random.swift */,
 				4933EBC91DA63A3F009439A6 /* Main.storyboard */,
 				4933EBCC1DA63A3F009439A6 /* Assets.xcassets */,
@@ -319,6 +322,7 @@
 			files = (
 				4933EBC81DA63A3F009439A6 /* GameViewController.swift in Sources */,
 				49FBD5611DA63F3D0090FF93 /* Status.swift in Sources */,
+				4941A6BB1DAB8F3E00292B83 /* UIAlertController+Success.swift in Sources */,
 				4933EBC61DA63A3F009439A6 /* AppDelegate.swift in Sources */,
 				4933EBE61DA63AE7009439A6 /* Network.swift in Sources */,
 				49FBD5651DA64B240090FF93 /* Player.swift in Sources */,

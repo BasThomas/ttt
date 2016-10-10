@@ -22,7 +22,7 @@ class StartViewController: UIViewController {
     startButton.isEnabled = false
     Network.start { [weak self] player, message in
       if let message = message {
-        self?.present(UIAlertController.alert(with: message), animated: true) {
+        self?.present(UIAlertController.error(with: message), animated: true) {
           let generator = UINotificationFeedbackGenerator()
           generator.notificationOccurred(.error)
         }

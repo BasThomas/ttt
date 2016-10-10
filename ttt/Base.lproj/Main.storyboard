@@ -55,9 +55,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-Rx-UYc">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Boom gevonden"/>
+                                <state key="normal" title="Scan QR code"/>
                                 <connections>
-                                    <action selector="treeFound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLu-6w-ffn"/>
+                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9G-xi-RKS"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exp-wC-574">
