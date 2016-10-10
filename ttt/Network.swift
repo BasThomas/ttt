@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Freddy
 
-fileprivate let baseURL = "http://192.168.1.2:8000/api"
+fileprivate let baseURL = "http://145.93.33.189:8000/api" //"http://192.168.1.2:8000/api"
 
 enum Network {
   
