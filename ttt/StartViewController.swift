@@ -11,16 +11,27 @@ import UIKit
 private let startIdentifier = "start"
 
 class StartViewController: UIViewController {
+  @IBOutlet var nameTextField: UITextField!
   @IBOutlet var startButton: UIButton!
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     startButton.isEnabled = true
+    nameTextField.text = nil
   }
   
   @IBAction func start(_ sender: AnyObject) {
+    guard
+      let name = nameTextField.text,
+      !name.isEmpty else {
+      present(UIAlertController.error(with: "Geen gebruikersnaam ingevuld"), animated: true) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+      }
+      return
+    }
     startButton.isEnabled = false
-    Network.start { [weak self] game, message in
+    Network.start(with: name) { [weak self] game, message in
       if let message = message {
         self?.present(UIAlertController.error(with: message), animated: true) {
           let generator = UINotificationFeedbackGenerator()

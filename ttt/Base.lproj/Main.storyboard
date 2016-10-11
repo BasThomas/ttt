@@ -25,14 +25,23 @@
                                     <action selector="start:" destination="NIZ-kg-FWR" eventType="touchUpInside" id="QSe-nd-fOG"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vul hier je naam in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORu-o5-fg6">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aB6-Nb-mVs" firstAttribute="centerX" secondItem="vVs-pg-eUI" secondAttribute="centerX" id="JKE-g4-9MY"/>
+                            <constraint firstItem="ORu-o5-fg6" firstAttribute="top" secondItem="aB6-Nb-mVs" secondAttribute="bottom" constant="8" id="Yoi-33-EZ4"/>
+                            <constraint firstItem="ORu-o5-fg6" firstAttribute="leading" secondItem="vVs-pg-eUI" secondAttribute="leading" constant="8" id="lEI-6F-MAd"/>
                             <constraint firstItem="aB6-Nb-mVs" firstAttribute="centerY" secondItem="vVs-pg-eUI" secondAttribute="centerY" id="olc-Xp-7uU"/>
+                            <constraint firstAttribute="trailing" secondItem="ORu-o5-fg6" secondAttribute="trailing" constant="8" id="xUN-xX-5WS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameTextField" destination="ORu-o5-fg6" id="iAs-Nj-chj"/>
                         <outlet property="startButton" destination="aB6-Nb-mVs" id="orq-A1-q0I"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="start" id="ncY-B0-DSb"/>
                     </connections>
@@ -54,6 +63,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-Rx-UYc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="P9b-Fd-QCA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Scan QR code"/>
                                 <connections>

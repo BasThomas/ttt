@@ -10,12 +10,14 @@ import Foundation
 import Alamofire
 import Freddy
 
-fileprivate let baseURL = "http://145.93.33.189:8000" //"http://192.168.1.2:8000"
+fileprivate let baseURL = "http://145.93.33.181:8000" //"http://192.168.1.2:8000"
+
+typealias Name = String
 
 enum Network {
   
-  static func start(completionHandler: @escaping (Game?, String?) -> Void) {
-    Alamofire.request("\(baseURL)/api/start", method: .post, parameters: [:]).responseJSON { response in
+  static func start(with name: Name, completionHandler: @escaping (Game?, String?) -> Void) {
+    Alamofire.request("\(baseURL)/api/start", method: .post, parameters: ["name": name]).responseJSON { response in
       guard
         let data = response.data,
         let statusCode = response.response?.statusCode else { return }
