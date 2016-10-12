@@ -46,8 +46,10 @@ extension Status: Equatable {
     switch (lhs, rhs) {
     case (let .found(id1), let .found(id2)):
       return id1 == id2
+    case (.ready, .ready), (.ended, .ended):
+      return true
     default:
-      return lhs == rhs
+      return false
     }
   }
 }

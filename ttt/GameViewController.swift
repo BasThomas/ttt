@@ -98,7 +98,7 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
         if let error = error {
           let handler: ((UIAlertAction) -> Void)? = { [weak self] _ in
             guard self?.status == .ended else { return }
-            _ = self?.navigationController?.popToRootViewController(animated: true)
+            self?.dismiss(animated: true)
           }
           self?.present(UIAlertController.error(with: error, completionHandler: handler), animated: true) {
             generator.notificationOccurred(.success)
