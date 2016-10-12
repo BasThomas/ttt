@@ -34,12 +34,14 @@ class GameViewController: UIViewController {
   var timer: Timer!
   var latestURLString: String?
   var verifyingScan = false
+  var status: Status?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     prepareSound()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
       Network.status { [weak self] status in
+        self?.status = status
         switch status {
         case .ready:
           ()
@@ -94,7 +96,11 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
       Network.found(by: weakSelf.game.player, qr: result.value, latestURL: imageURLString) { [weak self] url, error in
         let generator = UINotificationFeedbackGenerator()
         if let error = error {
-          self?.present(UIAlertController.error(with: error), animated: true) {
+          let handler: ((UIAlertAction) -> Void)? = { [weak self] _ in
+            guard self?.status == .ended else { return }
+            _ = self?.navigationController?.popToRootViewController(animated: true)
+          }
+          self?.present(UIAlertController.error(with: error, completionHandler: handler), animated: true) {
             generator.notificationOccurred(.success)
           }
         } else if let url = url {

@@ -39,3 +39,15 @@ extension Status: JSONDecodable {
     }
   }
 }
+
+extension Status: Equatable {
+  
+  static func ==(lhs: Status, rhs: Status) -> Bool {
+    switch (lhs, rhs) {
+    case (let .found(id1), let .found(id2)):
+      return id1 == id2
+    default:
+      return lhs == rhs
+    }
+  }
+}
