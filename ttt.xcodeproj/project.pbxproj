@@ -219,11 +219,7 @@
 				TargetAttributes = {
 					4933EBC11DA63A3F009439A6 = {
 						CreatedOnToolsVersion = 8.0;
-<<<<<<< HEAD
 						DevelopmentTeam = 5966C2APME;
-=======
-						DevelopmentTeam = 773FQ23Y5A;
->>>>>>> 4900531dd75693c2c9f7d68737bd8d031336ef97
 						ProvisioningStyle = Automatic;
 					};
 					4933EBD51DA63A3F009439A6 = {
@@ -481,11 +477,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 5966C2APME;
-=======
-				DEVELOPMENT_TEAM = 773FQ23Y5A;
->>>>>>> 4900531dd75693c2c9f7d68737bd8d031336ef97
 				INFOPLIST_FILE = ttt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.ttt;
@@ -501,11 +493,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 5966C2APME;
-=======
-				DEVELOPMENT_TEAM = 773FQ23Y5A;
->>>>>>> 4900531dd75693c2c9f7d68737bd8d031336ef97
 				INFOPLIST_FILE = ttt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.ttt;
