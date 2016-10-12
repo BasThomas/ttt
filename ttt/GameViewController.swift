@@ -44,8 +44,8 @@ class GameViewController: UIViewController {
         case .ready:
           ()
         case .ended:
-          self?.dismiss(animated: true)
           self?.timer.invalidate()
+          self?.dismiss(animated: true)
         case .found(id: _):
           ()
         }
