@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
           ()
         case .ended:
           self?.timer.invalidate()
-          self?.dismiss(animated: true)
+          _ = self?.navigationController?.popToRootViewController(animated: true)
         case .found(id: _):
           ()
         }
