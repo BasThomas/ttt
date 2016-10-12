@@ -58,11 +58,6 @@ class GameViewController: UIViewController {
   }
   
   @IBAction func scan(_ sender: AnyObject) {
-    //    Network.found(by: player)
-    //    treeFoundButton.isEnabled = false
-    //    let generator = UINotificationFeedbackGenerator()
-    //    generator.notificationOccurred(.success)
-    
     guard QRCodeReader.isAvailable() else { return present(UIAlertController.error(with: "QR code-lezer niet beschikbaar"), animated: true) }
     
     readerVC.delegate = self
