@@ -113,6 +113,7 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
   }
   
   func readerDidCancel(_ reader: QRCodeReaderViewController) {
+    verifyingScan = false
     dismiss(animated: true) {
       let generator = UINotificationFeedbackGenerator()
       generator.notificationOccurred(.warning)
