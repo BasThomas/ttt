@@ -33,6 +33,7 @@ class GameViewController: UIViewController {
   }
   var timer: Timer!
   var latestURLString: String?
+  var verifyingScan = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -88,6 +89,8 @@ class GameViewController: UIViewController {
 extension GameViewController: QRCodeReaderViewControllerDelegate {
   
   func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+    guard !verifyingScan else { return }
+    verifyingScan = true
     dismiss(animated: true) { [weak self] in
       guard
         let weakSelf = self,
@@ -103,6 +106,7 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
           self?.updateImage(with: url)
           generator.notificationOccurred(.success)
         }
+        self?.verifyingScan = false
       }
     }
   }
