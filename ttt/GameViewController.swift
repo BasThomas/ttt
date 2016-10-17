@@ -25,7 +25,8 @@ class GameViewController: UIViewController {
     $0.showSwitchCameraButton = false
   })
   
-  var audioPlayer: AVAudioPlayer?
+  var audioPlayerCorrect: AVAudioPlayer?
+  var audioPlayerError: AVAudioPlayer?
   var game: Game! {
     didSet {
       latestURLString = String(game.url.path.characters.dropFirst())
@@ -73,15 +74,17 @@ class GameViewController: UIViewController {
   func updateImage(with url: URL) {
     let generator = UIImpactFeedbackGenerator(style: .heavy)
     generator.impactOccurred()
-    audioPlayer?.play()
+    audioPlayerCorrect?.play()
     treeFoundButton.isEnabled = true
     imageView.kf.setImage(with: url)
     latestURLString = String(url.path.characters.dropFirst())
   }
   
   private func prepareSound() {
-    audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "feedback", ofType: "wav")!))
-    audioPlayer?.prepareToPlay()
+    audioPlayerCorrect = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "wav")!))
+    audioPlayerError = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "error", ofType: "wav")!))
+    audioPlayerCorrect?.prepareToPlay()
+    audioPlayerError?.prepareToPlay()
   }
 }
 
@@ -94,7 +97,6 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
       guard
         let weakSelf = self,
         let imageURLString = self?.latestURLString else { return }
-      // FIXME: Generate feedback after handling server here.
       Network.found(by: weakSelf.game.player, qr: result.value, latestURL: imageURLString) { [weak self] url, error in
         let generator = UINotificationFeedbackGenerator()
         if let error = error {
@@ -103,7 +105,8 @@ extension GameViewController: QRCodeReaderViewControllerDelegate {
             self?.dismiss(animated: true)
           }
           self?.present(UIAlertController.error(with: error, completionHandler: handler), animated: true) {
-            generator.notificationOccurred(.success)
+            generator.notificationOccurred(.error)
+            self?.audioPlayerError?.play()
           }
         } else if let url = url {
           self?.updateImage(with: url)

@@ -21,7 +21,8 @@
 		4941A6BB1DAB8F3E00292B83 /* UIAlertController+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */; };
 		498334F31DA65D81006105C0 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498334F21DA65D81006105C0 /* UIAlertController+Error.swift */; };
 		498334F51DA65E8D006105C0 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498334F41DA65E8D006105C0 /* Array+Random.swift */; };
-		49D9B1881DA6CF090095093A /* feedback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49D9B1871DA6CF090095093A /* feedback.wav */; };
+		49878E671DB4ED9C001859B7 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49878E651DB4ED9C001859B7 /* correct.wav */; };
+		49878E681DB4ED9C001859B7 /* error.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49878E661DB4ED9C001859B7 /* error.wav */; };
 		49FBD5611DA63F3D0090FF93 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBD5601DA63F3D0090FF93 /* Status.swift */; };
 		49FBD5631DA644590090FF93 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBD5621DA644590090FF93 /* StartViewController.swift */; };
 		49FBD5651DA64B240090FF93 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FBD5641DA64B240090FF93 /* Player.swift */; };
@@ -58,7 +59,8 @@
 		4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Success.swift"; sourceTree = "<group>"; };
 		498334F21DA65D81006105C0 /* UIAlertController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
 		498334F41DA65E8D006105C0 /* Array+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
-		49D9B1871DA6CF090095093A /* feedback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = feedback.wav; sourceTree = "<group>"; };
+		49878E651DB4ED9C001859B7 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		49878E661DB4ED9C001859B7 /* error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = error.wav; sourceTree = "<group>"; };
 		49FBD5601DA63F3D0090FF93 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		49FBD5621DA644590090FF93 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		49FBD5641DA64B240090FF93 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -88,7 +90,8 @@
 		4933EBB91DA63A3E009439A6 = {
 			isa = PBXGroup;
 			children = (
-				49D9B1871DA6CF090095093A /* feedback.wav */,
+				49878E651DB4ED9C001859B7 /* correct.wav */,
+				49878E661DB4ED9C001859B7 /* error.wav */,
 				4933EBC41DA63A3F009439A6 /* ttt */,
 				4933EBD91DA63A3F009439A6 /* tttTests */,
 				4933EBC31DA63A3F009439A6 /* Products */,
@@ -260,7 +263,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D9B1881DA6CF090095093A /* feedback.wav in Resources */,
+				49878E671DB4ED9C001859B7 /* correct.wav in Resources */,
+				49878E681DB4ED9C001859B7 /* error.wav in Resources */,
 				4933EBD01DA63A3F009439A6 /* LaunchScreen.storyboard in Resources */,
 				4933EBCD1DA63A3F009439A6 /* Assets.xcassets in Resources */,
 				4933EBCB1DA63A3F009439A6 /* Main.storyboard in Resources */,
