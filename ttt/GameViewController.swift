@@ -41,6 +41,7 @@ class GameViewController: UIViewController {
     prepareSound()
     timer = .scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
       Network.status { [weak self] status in
+        print("STATUS: \(status)")
         self?.status = status
         switch status {
         case .ready:
@@ -48,6 +49,7 @@ class GameViewController: UIViewController {
         case .ended:
           self?.timer.invalidate()
           _ = self?.navigationController?.popToRootViewController(animated: true)
+          self?.dismiss(animated: true)
         case .found(id: _):
           ()
         }

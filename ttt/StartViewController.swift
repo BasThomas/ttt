@@ -14,10 +14,21 @@ class StartViewController: UIViewController {
   @IBOutlet var nameTextField: UITextField!
   @IBOutlet var startButton: UIButton!
   
+  private var isStarted = false
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     startButton.isEnabled = true
     nameTextField.text = nil
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    if isStarted {
+      isStarted = false
+      presentScore()
+    }
   }
   
   @IBAction func start(_ sender: AnyObject) {
@@ -39,6 +50,7 @@ class StartViewController: UIViewController {
         }
         self?.startButton.isEnabled = true
       } else {
+        self?.isStarted = true
         self?.performSegue(withIdentifier: startIdentifier, sender: game)
       }
     }
@@ -50,5 +62,9 @@ class StartViewController: UIViewController {
       let game = sender as? Game,
       segue.identifier == startIdentifier else { return }
     destination.game = game
+  }
+  
+  private func presentScore() {
+    performSegue(withIdentifier: "showScore", sender: self)
   }
 }

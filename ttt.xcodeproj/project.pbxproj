@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45063E1A1DABB724007D00EA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45063E191DABB724007D00EA /* Game.swift */; };
+		4900F9B71DB4C89200D3BF79 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B61DB4C89200D3BF79 /* Score.swift */; };
+		4900F9B91DB4CB4A00D3BF79 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */; };
 		4933EBC61DA63A3F009439A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBC51DA63A3F009439A6 /* AppDelegate.swift */; };
 		4933EBC81DA63A3F009439A6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBC71DA63A3F009439A6 /* GameViewController.swift */; };
 		4933EBCB1DA63A3F009439A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4933EBC91DA63A3F009439A6 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		14ABFE18195DE7803F5D8ED2 /* Pods-ttt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ttt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ttt/Pods-ttt.release.xcconfig"; sourceTree = "<group>"; };
 		45063E191DABB724007D00EA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4900F9B61DB4C89200D3BF79 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		4933EBC21DA63A3F009439A6 /* ttt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ttt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4933EBC51DA63A3F009439A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4933EBC71DA63A3F009439A6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			children = (
 				4933EBC51DA63A3F009439A6 /* AppDelegate.swift */,
 				49FBD5621DA644590090FF93 /* StartViewController.swift */,
+				4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */,
 				4933EBC71DA63A3F009439A6 /* GameViewController.swift */,
 				49FBD55F1DA63F220090FF93 /* Model */,
 				49FBD55E1DA63F1A0090FF93 /* Control */,
@@ -145,6 +150,7 @@
 				49FBD5601DA63F3D0090FF93 /* Status.swift */,
 				49FBD5641DA64B240090FF93 /* Player.swift */,
 				45063E191DABB724007D00EA /* Game.swift */,
+				4900F9B61DB4C89200D3BF79 /* Score.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -219,7 +225,7 @@
 				TargetAttributes = {
 					4933EBC11DA63A3F009439A6 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5966C2APME;
+						DevelopmentTeam = T4Q499T59T;
 						ProvisioningStyle = Automatic;
 					};
 					4933EBD51DA63A3F009439A6 = {
@@ -327,12 +333,14 @@
 				49FBD5611DA63F3D0090FF93 /* Status.swift in Sources */,
 				4941A6BB1DAB8F3E00292B83 /* UIAlertController+Success.swift in Sources */,
 				4933EBC61DA63A3F009439A6 /* AppDelegate.swift in Sources */,
+				4900F9B91DB4CB4A00D3BF79 /* ScoreTableViewController.swift in Sources */,
 				4933EBE61DA63AE7009439A6 /* Network.swift in Sources */,
 				49FBD5651DA64B240090FF93 /* Player.swift in Sources */,
 				45063E1A1DABB724007D00EA /* Game.swift in Sources */,
 				4933EBE81DA63C97009439A6 /* UIColor+GameColors.swift in Sources */,
 				49FBD5631DA644590090FF93 /* StartViewController.swift in Sources */,
 				498334F31DA65D81006105C0 /* UIAlertController+Error.swift in Sources */,
+				4900F9B71DB4C89200D3BF79 /* Score.swift in Sources */,
 				498334F51DA65E8D006105C0 /* Array+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +485,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5966C2APME;
+				DEVELOPMENT_TEAM = T4Q499T59T;
 				INFOPLIST_FILE = ttt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.ttt;
@@ -493,7 +501,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5966C2APME;
+				DEVELOPMENT_TEAM = T4Q499T59T;
 				INFOPLIST_FILE = ttt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.ttt;

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Freddy
 
-fileprivate let baseURL = "http://192.168.1.2:8000" //"http://145.93.33.181:8000"
+fileprivate let baseURL = "http://145.93.32.69:8000" //"http://192.168.1.2:8000"
 
 typealias Name = String
 
@@ -85,6 +85,17 @@ enum Network {
         let json = try? JSON(data: data),
         let status = try? Status(json: json) else { return }
       completionHandler(status)
+    }
+  }
+  
+  static func score(completionHandler: @escaping ([Score]) -> Void) {
+    Alamofire.request("\(baseURL)/api/score", method: .get).responseJSON { response in
+      print(response)
+      guard
+        let data = response.data,
+        let json = try? JSON(data: data),
+        let scores = try? json.getArray(at: "score").map(Score.init) else { return }
+      completionHandler(scores)
     }
   }
 }
