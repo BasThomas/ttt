@@ -18,26 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB6-Nb-mVs">
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Start"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Start game.png" translatesAutoresizingMaskIntoConstraints="NO" id="kt7-Kk-r8o"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Input field.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Iw-dB-uA7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="5d8-bu-Zgk"/>
+                                    <constraint firstAttribute="height" constant="41" id="JIY-Xj-7BC"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vul hier je naam in" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORu-o5-fg6">
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB6-Nb-mVs">
+                                <state key="normal" image="Start Button.png"/>
                                 <connections>
                                     <action selector="start:" destination="NIZ-kg-FWR" eventType="touchUpInside" id="QSe-nd-fOG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vul hier je naam in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORu-o5-fg6">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kt7-Kk-r8o" firstAttribute="top" secondItem="8Iw-dB-uA7" secondAttribute="bottom" constant="-160" id="H1o-Gz-f5t"/>
+                            <constraint firstItem="8Iw-dB-uA7" firstAttribute="centerX" secondItem="vVs-pg-eUI" secondAttribute="centerX" id="JDE-Dj-gFC"/>
                             <constraint firstItem="aB6-Nb-mVs" firstAttribute="centerX" secondItem="vVs-pg-eUI" secondAttribute="centerX" id="JKE-g4-9MY"/>
-                            <constraint firstItem="ORu-o5-fg6" firstAttribute="top" secondItem="aB6-Nb-mVs" secondAttribute="bottom" constant="8" id="Yoi-33-EZ4"/>
-                            <constraint firstItem="ORu-o5-fg6" firstAttribute="leading" secondItem="vVs-pg-eUI" secondAttribute="leading" constant="8" id="lEI-6F-MAd"/>
-                            <constraint firstItem="aB6-Nb-mVs" firstAttribute="centerY" secondItem="vVs-pg-eUI" secondAttribute="centerY" constant="-95.5" id="olc-Xp-7uU"/>
-                            <constraint firstAttribute="trailing" secondItem="ORu-o5-fg6" secondAttribute="trailing" constant="8" id="xUN-xX-5WS"/>
+                            <constraint firstItem="kt7-Kk-r8o" firstAttribute="leading" secondItem="vVs-pg-eUI" secondAttribute="leading" id="KNh-kp-Ovz"/>
+                            <constraint firstItem="kt7-Kk-r8o" firstAttribute="bottom" secondItem="lf1-IO-cbc" secondAttribute="top" id="NMb-gy-Afr"/>
+                            <constraint firstItem="kt7-Kk-r8o" firstAttribute="top" secondItem="vVs-pg-eUI" secondAttribute="top" id="RZp-QZ-0wn"/>
+                            <constraint firstItem="ORu-o5-fg6" firstAttribute="top" secondItem="8Iw-dB-uA7" secondAttribute="bottom" constant="-32" id="dn9-EM-r9g"/>
+                            <constraint firstAttribute="trailing" secondItem="kt7-Kk-r8o" secondAttribute="trailing" id="oga-Rw-gC1"/>
+                            <constraint firstItem="aB6-Nb-mVs" firstAttribute="top" secondItem="8Iw-dB-uA7" secondAttribute="bottom" constant="40" id="vIx-wz-pdy"/>
+                            <constraint firstItem="ORu-o5-fg6" firstAttribute="leading" secondItem="8Iw-dB-uA7" secondAttribute="trailing" constant="-167" id="yxp-tp-ULI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYc-sq-3hR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708" y="38"/>
+            <point key="canvasLocation" x="-708" y="37.331334332833585"/>
         </scene>
         <!--Highscore-->
         <scene sceneID="hnq-UK-geX">
@@ -114,12 +125,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-Rx-UYc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-Rx-UYc">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="P9b-Fd-QCA"/>
+                                    <constraint firstAttribute="height" constant="63" id="P9b-Fd-QCA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Scan QR code"/>
+                                <state key="normal" title="Scan QR code" image="ScanQR.png"/>
                                 <connections>
                                     <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9G-xi-RKS"/>
                                 </connections>
@@ -144,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="403"/>
+            <point key="canvasLocation" x="136.80000000000001" y="402.54872563718146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gmD-gk-gHJ">
@@ -165,4 +175,10 @@
             <point key="canvasLocation" x="136.80000000000001" y="-296.40179910044981"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Input field.png" width="232" height="51"/>
+        <image name="ScanQR.png" width="492" height="77"/>
+        <image name="Start Button.png" width="237" height="56"/>
+        <image name="Start game.png" width="375" height="667"/>
+    </resources>
 </document>

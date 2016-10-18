@@ -20,6 +20,7 @@ class StartViewController: UIViewController {
     super.viewWillAppear(animated)
     startButton.isEnabled = true
     nameTextField.text = nil
+    nameTextField.setValue(UIColor.init(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 0.5), forKeyPath: "_placeholderLabel.textColor")
   }
   
   override func viewDidAppear(_ animated: Bool) {
