@@ -19,6 +19,10 @@ class GameViewController: UIViewController {
   }
   @IBOutlet var treeFoundButton: UIButton!
   
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
   lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
     $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
     $0.cancelButtonTitle = "Annuleer"

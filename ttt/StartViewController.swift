@@ -23,6 +23,10 @@ class StartViewController: UIViewController {
     nameTextField.setValue(UIColor.init(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 0.5), forKeyPath: "_placeholderLabel.textColor")
   }
   
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     

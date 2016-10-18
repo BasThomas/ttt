@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Freddy
 
-fileprivate let baseURL = "http://145.93.32.100:8000" //"http://192.168.1.2:8000"
+fileprivate let baseURL = "http://192.168.1.2:8000" //"http://145.93.32.100:8000"
 
 typealias Name = String
 
