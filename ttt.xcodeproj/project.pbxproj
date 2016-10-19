@@ -23,6 +23,12 @@
 		4509D0251DB6B325004A621F /* ScanQR.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0221DB6B325004A621F /* ScanQR.png */; };
 		4509D0261DB6B325004A621F /* ScanQR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0231DB6B325004A621F /* ScanQR@2x.png */; };
 		4509D0271DB6B325004A621F /* ScanQR@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0241DB6B325004A621F /* ScanQR@3x.png */; };
+		4532FCC71DB7EE0C00317C09 /* RunForestRun Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */; };
+		4532FCC81DB7EE0C00317C09 /* RunForestRun Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */; };
+		4532FCC91DB7EE0C00317C09 /* RunForestRun Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */; };
+		4532FCCD1DB8075000317C09 /* Photo person.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCA1DB8075000317C09 /* Photo person.png */; };
+		4532FCCE1DB8075000317C09 /* Photo person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCB1DB8075000317C09 /* Photo person@2x.png */; };
+		4532FCCF1DB8075000317C09 /* Photo person@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCC1DB8075000317C09 /* Photo person@3x.png */; };
 		4900F9B71DB4C89200D3BF79 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B61DB4C89200D3BF79 /* Score.swift */; };
 		4900F9B91DB4CB4A00D3BF79 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */; };
 		4933EBC61DA63A3F009439A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBC51DA63A3F009439A6 /* AppDelegate.swift */; };
@@ -72,6 +78,12 @@
 		4509D0221DB6B325004A621F /* ScanQR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScanQR.png; sourceTree = "<group>"; };
 		4509D0231DB6B325004A621F /* ScanQR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR@2x.png"; sourceTree = "<group>"; };
 		4509D0241DB6B325004A621F /* ScanQR@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR@3x.png"; sourceTree = "<group>"; };
+		4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo.png"; sourceTree = "<group>"; };
+		4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo@2x.png"; sourceTree = "<group>"; };
+		4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo@3x.png"; sourceTree = "<group>"; };
+		4532FCCA1DB8075000317C09 /* Photo person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person.png"; sourceTree = "<group>"; };
+		4532FCCB1DB8075000317C09 /* Photo person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person@2x.png"; sourceTree = "<group>"; };
+		4532FCCC1DB8075000317C09 /* Photo person@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person@3x.png"; sourceTree = "<group>"; };
 		4900F9B61DB4C89200D3BF79 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		4933EBC21DA63A3F009439A6 /* ttt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ttt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +147,12 @@
 				4509D0221DB6B325004A621F /* ScanQR.png */,
 				4509D0231DB6B325004A621F /* ScanQR@2x.png */,
 				4509D0241DB6B325004A621F /* ScanQR@3x.png */,
+				4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */,
+				4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */,
+				4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */,
+				4532FCCA1DB8075000317C09 /* Photo person.png */,
+				4532FCCB1DB8075000317C09 /* Photo person@2x.png */,
+				4532FCCC1DB8075000317C09 /* Photo person@3x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -317,17 +335,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4509D00E1DB6A0BC004A621F /* Startup screen@3x.png in Resources */,
+				4532FCC81DB7EE0C00317C09 /* RunForestRun Logo@2x.png in Resources */,
 				49878E671DB4ED9C001859B7 /* correct.wav in Resources */,
 				4509D0211DB6A53D004A621F /* Start Button@3x.png in Resources */,
+				4532FCCD1DB8075000317C09 /* Photo person.png in Resources */,
 				49878E681DB4ED9C001859B7 /* error.wav in Resources */,
 				4933EBD01DA63A3F009439A6 /* LaunchScreen.storyboard in Resources */,
 				4509D0251DB6B325004A621F /* ScanQR.png in Resources */,
 				4933EBCD1DA63A3F009439A6 /* Assets.xcassets in Resources */,
+				4532FCC91DB7EE0C00317C09 /* RunForestRun Logo@3x.png in Resources */,
 				4509D0271DB6B325004A621F /* ScanQR@3x.png in Resources */,
 				4509D0131DB6A240004A621F /* Start game.png in Resources */,
 				4509D00F1DB6A0BC004A621F /* Startup screen@2x.png in Resources */,
+				4532FCC71DB7EE0C00317C09 /* RunForestRun Logo.png in Resources */,
+				4532FCCF1DB8075000317C09 /* Photo person@3x.png in Resources */,
 				4509D01F1DB6A53D004A621F /* Start Button.png in Resources */,
 				4509D0151DB6A240004A621F /* Start game@3x.png in Resources */,
+				4532FCCE1DB8075000317C09 /* Photo person@2x.png in Resources */,
 				4509D01A1DB6A2FB004A621F /* Input field@2x.png in Resources */,
 				4509D0201DB6A53D004A621F /* Start Button@2x.png in Resources */,
 				4509D00D1DB6A0BC004A621F /* Startup screen.png in Resources */,

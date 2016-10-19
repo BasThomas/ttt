@@ -34,6 +34,8 @@ class StartViewController: UIViewController {
       isStarted = false
       presentScore()
     }
+    
+    self.hideKeyboardWhenTappedAround()
   }
   
   @IBAction func start(_ sender: AnyObject) {
@@ -71,5 +73,17 @@ class StartViewController: UIViewController {
   
   private func presentScore() {
     performSegue(withIdentifier: "showScore", sender: self)
+  }
+}
+
+// MARK: Extension
+extension UIViewController {
+  func hideKeyboardWhenTappedAround() {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+    view.addGestureRecognizer(tap)
+  }
+  
+  func dismissKeyboard() {
+    view.endEditing(true)
   }
 }
