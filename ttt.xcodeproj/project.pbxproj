@@ -8,27 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		45063E1A1DABB724007D00EA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45063E191DABB724007D00EA /* Game.swift */; };
-		4509D00D1DB6A0BC004A621F /* Startup screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D00A1DB6A0BC004A621F /* Startup screen.png */; };
-		4509D00E1DB6A0BC004A621F /* Startup screen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D00B1DB6A0BC004A621F /* Startup screen@3x.png */; };
-		4509D00F1DB6A0BC004A621F /* Startup screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D00C1DB6A0BC004A621F /* Startup screen@2x.png */; };
-		4509D0131DB6A240004A621F /* Start game.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0101DB6A240004A621F /* Start game.png */; };
-		4509D0141DB6A240004A621F /* Start game@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0111DB6A240004A621F /* Start game@2x.png */; };
-		4509D0151DB6A240004A621F /* Start game@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0121DB6A240004A621F /* Start game@3x.png */; };
-		4509D0191DB6A2FB004A621F /* Input field.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0161DB6A2FB004A621F /* Input field.png */; };
-		4509D01A1DB6A2FB004A621F /* Input field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0171DB6A2FB004A621F /* Input field@2x.png */; };
-		4509D01B1DB6A2FB004A621F /* Input field@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0181DB6A2FB004A621F /* Input field@3x.png */; };
-		4509D01F1DB6A53D004A621F /* Start Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D01C1DB6A53D004A621F /* Start Button.png */; };
-		4509D0201DB6A53D004A621F /* Start Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D01D1DB6A53D004A621F /* Start Button@2x.png */; };
-		4509D0211DB6A53D004A621F /* Start Button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D01E1DB6A53D004A621F /* Start Button@3x.png */; };
-		4509D0251DB6B325004A621F /* ScanQR.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0221DB6B325004A621F /* ScanQR.png */; };
-		4509D0261DB6B325004A621F /* ScanQR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0231DB6B325004A621F /* ScanQR@2x.png */; };
-		4509D0271DB6B325004A621F /* ScanQR@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4509D0241DB6B325004A621F /* ScanQR@3x.png */; };
-		4532FCC71DB7EE0C00317C09 /* RunForestRun Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */; };
-		4532FCC81DB7EE0C00317C09 /* RunForestRun Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */; };
-		4532FCC91DB7EE0C00317C09 /* RunForestRun Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */; };
-		4532FCCD1DB8075000317C09 /* Photo person.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCA1DB8075000317C09 /* Photo person.png */; };
-		4532FCCE1DB8075000317C09 /* Photo person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCB1DB8075000317C09 /* Photo person@2x.png */; };
-		4532FCCF1DB8075000317C09 /* Photo person@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4532FCCC1DB8075000317C09 /* Photo person@3x.png */; };
 		4900F9B71DB4C89200D3BF79 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B61DB4C89200D3BF79 /* Score.swift */; };
 		4900F9B91DB4CB4A00D3BF79 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */; };
 		4933EBC61DA63A3F009439A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933EBC51DA63A3F009439A6 /* AppDelegate.swift */; };
@@ -63,27 +42,6 @@
 /* Begin PBXFileReference section */
 		14ABFE18195DE7803F5D8ED2 /* Pods-ttt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ttt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ttt/Pods-ttt.release.xcconfig"; sourceTree = "<group>"; };
 		45063E191DABB724007D00EA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		4509D00A1DB6A0BC004A621F /* Startup screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Startup screen.png"; sourceTree = "<group>"; };
-		4509D00B1DB6A0BC004A621F /* Startup screen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Startup screen@3x.png"; sourceTree = "<group>"; };
-		4509D00C1DB6A0BC004A621F /* Startup screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Startup screen@2x.png"; sourceTree = "<group>"; };
-		4509D0101DB6A240004A621F /* Start game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start game.png"; sourceTree = "<group>"; };
-		4509D0111DB6A240004A621F /* Start game@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start game@2x.png"; sourceTree = "<group>"; };
-		4509D0121DB6A240004A621F /* Start game@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start game@3x.png"; sourceTree = "<group>"; };
-		4509D0161DB6A2FB004A621F /* Input field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Input field.png"; sourceTree = "<group>"; };
-		4509D0171DB6A2FB004A621F /* Input field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Input field@2x.png"; sourceTree = "<group>"; };
-		4509D0181DB6A2FB004A621F /* Input field@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Input field@3x.png"; sourceTree = "<group>"; };
-		4509D01C1DB6A53D004A621F /* Start Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Button.png"; sourceTree = "<group>"; };
-		4509D01D1DB6A53D004A621F /* Start Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Button@2x.png"; sourceTree = "<group>"; };
-		4509D01E1DB6A53D004A621F /* Start Button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Button@3x.png"; sourceTree = "<group>"; };
-		4509D0221DB6B325004A621F /* ScanQR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScanQR.png; sourceTree = "<group>"; };
-		4509D0231DB6B325004A621F /* ScanQR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR@2x.png"; sourceTree = "<group>"; };
-		4509D0241DB6B325004A621F /* ScanQR@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR@3x.png"; sourceTree = "<group>"; };
-		4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo.png"; sourceTree = "<group>"; };
-		4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo@2x.png"; sourceTree = "<group>"; };
-		4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RunForestRun Logo@3x.png"; sourceTree = "<group>"; };
-		4532FCCA1DB8075000317C09 /* Photo person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person.png"; sourceTree = "<group>"; };
-		4532FCCB1DB8075000317C09 /* Photo person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person@2x.png"; sourceTree = "<group>"; };
-		4532FCCC1DB8075000317C09 /* Photo person@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo person@3x.png"; sourceTree = "<group>"; };
 		4900F9B61DB4C89200D3BF79 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		4933EBC21DA63A3F009439A6 /* ttt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ttt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,34 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4509D0091DB6A0AF004A621F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				4509D00A1DB6A0BC004A621F /* Startup screen.png */,
-				4509D00B1DB6A0BC004A621F /* Startup screen@3x.png */,
-				4509D00C1DB6A0BC004A621F /* Startup screen@2x.png */,
-				4509D0101DB6A240004A621F /* Start game.png */,
-				4509D0111DB6A240004A621F /* Start game@2x.png */,
-				4509D0121DB6A240004A621F /* Start game@3x.png */,
-				4509D0161DB6A2FB004A621F /* Input field.png */,
-				4509D0171DB6A2FB004A621F /* Input field@2x.png */,
-				4509D0181DB6A2FB004A621F /* Input field@3x.png */,
-				4509D01C1DB6A53D004A621F /* Start Button.png */,
-				4509D01D1DB6A53D004A621F /* Start Button@2x.png */,
-				4509D01E1DB6A53D004A621F /* Start Button@3x.png */,
-				4509D0221DB6B325004A621F /* ScanQR.png */,
-				4509D0231DB6B325004A621F /* ScanQR@2x.png */,
-				4509D0241DB6B325004A621F /* ScanQR@3x.png */,
-				4532FCC41DB7EE0C00317C09 /* RunForestRun Logo.png */,
-				4532FCC51DB7EE0C00317C09 /* RunForestRun Logo@2x.png */,
-				4532FCC61DB7EE0C00317C09 /* RunForestRun Logo@3x.png */,
-				4532FCCA1DB8075000317C09 /* Photo person.png */,
-				4532FCCB1DB8075000317C09 /* Photo person@2x.png */,
-				4532FCCC1DB8075000317C09 /* Photo person@3x.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		4933EBB91DA63A3E009439A6 = {
 			isa = PBXGroup;
 			children = (
@@ -182,17 +112,13 @@
 		4933EBC41DA63A3F009439A6 /* ttt */ = {
 			isa = PBXGroup;
 			children = (
-				4509D0091DB6A0AF004A621F /* Images */,
 				4933EBC51DA63A3F009439A6 /* AppDelegate.swift */,
 				49FBD5621DA644590090FF93 /* StartViewController.swift */,
 				4900F9B81DB4CB4A00D3BF79 /* ScoreTableViewController.swift */,
 				4933EBC71DA63A3F009439A6 /* GameViewController.swift */,
 				49FBD55F1DA63F220090FF93 /* Model */,
 				49FBD55E1DA63F1A0090FF93 /* Control */,
-				4933EBE71DA63C97009439A6 /* UIColor+GameColors.swift */,
-				498334F21DA65D81006105C0 /* UIAlertController+Error.swift */,
-				4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */,
-				498334F41DA65E8D006105C0 /* Array+Random.swift */,
+				498E1B1A1DD09A9000C3DD97 /* Extensions */,
 				4933EBC91DA63A3F009439A6 /* Main.storyboard */,
 				4933EBCC1DA63A3F009439A6 /* Assets.xcassets */,
 				4933EBCE1DA63A3F009439A6 /* LaunchScreen.storyboard */,
@@ -208,6 +134,17 @@
 				4933EBDC1DA63A3F009439A6 /* Info.plist */,
 			);
 			path = tttTests;
+			sourceTree = "<group>";
+		};
+		498E1B1A1DD09A9000C3DD97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4933EBE71DA63C97009439A6 /* UIColor+GameColors.swift */,
+				498334F21DA65D81006105C0 /* UIAlertController+Error.swift */,
+				4941A6BA1DAB8F3E00292B83 /* UIAlertController+Success.swift */,
+				498334F41DA65E8D006105C0 /* Array+Random.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		49FBD55E1DA63F1A0090FF93 /* Control */ = {
@@ -334,32 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4509D00E1DB6A0BC004A621F /* Startup screen@3x.png in Resources */,
-				4532FCC81DB7EE0C00317C09 /* RunForestRun Logo@2x.png in Resources */,
 				49878E671DB4ED9C001859B7 /* correct.wav in Resources */,
-				4509D0211DB6A53D004A621F /* Start Button@3x.png in Resources */,
-				4532FCCD1DB8075000317C09 /* Photo person.png in Resources */,
 				49878E681DB4ED9C001859B7 /* error.wav in Resources */,
 				4933EBD01DA63A3F009439A6 /* LaunchScreen.storyboard in Resources */,
-				4509D0251DB6B325004A621F /* ScanQR.png in Resources */,
 				4933EBCD1DA63A3F009439A6 /* Assets.xcassets in Resources */,
-				4532FCC91DB7EE0C00317C09 /* RunForestRun Logo@3x.png in Resources */,
-				4509D0271DB6B325004A621F /* ScanQR@3x.png in Resources */,
-				4509D0131DB6A240004A621F /* Start game.png in Resources */,
-				4509D00F1DB6A0BC004A621F /* Startup screen@2x.png in Resources */,
-				4532FCC71DB7EE0C00317C09 /* RunForestRun Logo.png in Resources */,
-				4532FCCF1DB8075000317C09 /* Photo person@3x.png in Resources */,
-				4509D01F1DB6A53D004A621F /* Start Button.png in Resources */,
-				4509D0151DB6A240004A621F /* Start game@3x.png in Resources */,
-				4532FCCE1DB8075000317C09 /* Photo person@2x.png in Resources */,
-				4509D01A1DB6A2FB004A621F /* Input field@2x.png in Resources */,
-				4509D0201DB6A53D004A621F /* Start Button@2x.png in Resources */,
-				4509D00D1DB6A0BC004A621F /* Startup screen.png in Resources */,
-				4509D0141DB6A240004A621F /* Start game@2x.png in Resources */,
-				4509D0191DB6A2FB004A621F /* Input field.png in Resources */,
-				4509D01B1DB6A2FB004A621F /* Input field@3x.png in Resources */,
 				4933EBCB1DA63A3F009439A6 /* Main.storyboard in Resources */,
-				4509D0261DB6B325004A621F /* ScanQR@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
